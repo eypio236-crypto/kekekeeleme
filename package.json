@@ -1,0 +1,16 @@
+{
+  "name": "kimlik-olusturucu",
+  "version": "4.0.0",
+  "description": "Sahte Kimlik Oluşturucu - Canvas Tabanlı Hızlı API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "^0.1.52",
+    "axios": "^1.6.8",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1"
+  }
+}
