@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kimlik Kartı Oluşturucu - Hapsetme</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="img/fav.png" type="image/png">
+  <style>
+    /* Custom Modern Overrides */
+    body {
+      background-color: #0d1117;
+      color: #c9d1d9;
+      font-family: 'Rubik', sans-serif;
+    }
+    .navbar-custom {
+      background: rgba(22, 27, 34, 0.8) !important;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #30363d;
+    }
+    .navbar-brand {
+      font-weight: bold;
+      color: #ff4444 !important;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .card-modern {
+      background-color: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+    .card-header-modern {
+      background-color: rgba(255,255,255,0.02);
+      border-bottom: 1px solid #30363d;
+      font-weight: bold;
+      color: #fff;
+    }
+    .form-control {
+      background-color: #0d1117 !important;
+      border: 1px solid #30363d !important;
+      color: #c9d1d9 !important;
+      border-radius: 6px;
+    }
+    .form-control:focus {
+      border-color: #ff4444 !important;
+      box-shadow: 0 0 0 0.25rem rgba(255, 68, 68, 0.25) !important;
+    }
+    .btn-discord {
+      background-color: #5865F2;
+      border-color: #5865F2;
+      color: white;
+      font-weight: 500;
+      border-radius: 6px;
+    }
+    .btn-discord:hover {
+      background-color: #4752C4;
+      border-color: #4752C4;
+      color: white;
+    }
+    .btn-generate {
+      background-color: #ff4444;
+      border-color: #ff4444;
+      font-weight: bold;
+      padding: 12px;
+      border-radius: 6px;
+      width: 100%;
+      color: white;
+    }
+    .btn-generate:hover {
+      background-color: #cc0000;
+      color: white;
+    }
+    .btn-download {
+      background-color: #2ea043;
+      border-color: #2ea043;
+      color: white;
+      border-radius: 6px;
+    }
+    .btn-download:hover {
+      background-color: #2c974b;
+      color: white;
+    }
+    .form-label {
+      font-size: 0.9rem;
+      color: #8b949e;
+      margin-bottom: 4px;
+    }
+    .hero-section {
+      padding: 40px 0;
+      text-align: center;
+    }
+    .hero-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #fff;
+    }
+    .hero-subtitle {
+      color: #8b949e;
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .preview-box {
+      border: 2px dashed #30363d;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      background: rgba(22, 27, 34, 0.5);
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Modern Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">HAPSETME</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="window.open('https://discord.com/invite/hapsetme', '_blank')">
+              <button class="btn btn-discord btn-sm px-3 py-2">Discord'a Katıl</button>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <div class="container">
+      <h1 class="hero-title">Sahte Kimlik Oluşturucu</h1>
+      <p class="hero-subtitle mt-3">Görseller yüksek kaliteli değildir. Doğrudan kullanmanız sahtecilik yaptığınızın anlaşılmasına yol açabilir. Çıktıları bir mockup ile birleştirerek kullanmanızı tavsiye ederiz.</p>
+    </div>
+  </div>
+
+  <div class="container pb-5">
+    <div class="row g-4">
+      
+      <!-- Left Column: Form -->
+      <div class="col-lg-7">
+        <div class="card card-modern h-100">
+          <div class="card-header card-header-modern py-3">
+            <h5 class="mb-0">Kimlik Bilgileri</h5>
+          </div>
+          <div class="card-body p-4">
+            <form action="#" class="row g-3" id="form">
+              <div class="col-md-6">
+                <label class="form-label">İsim:</label>
+                <input class="form-control" name="name" oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '');" placeholder="İsim" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Soyisim:</label>
+                <input class="form-control" name="surname" oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '');" placeholder="Soyisim" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Doğum Tarihi:</label>
+                <input class="form-control" name="birth_date" type="date" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Cinsiyet:</label>
+                <select name="gender" class="form-select form-control">
+                  <option value="E / M">Erkek</option>
+                  <option value="K / F">Kadın</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">T.C. Kimlik No:</label>
+                <input class="form-control" name="tckn" oninput="this.value = this.value.replace(/[^0-9]/g, ''); if (this.value.length > 11) this.value = this.value.slice(0, 11);" placeholder="11 Haneli TC" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Seri No:</label>
+                <input class="form-control" name="document_number" placeholder="Seri No" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Son Geçerlilik Tarihi:</label>
+                <input class="form-control" name="valid_until" type="date" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Uyruk:</label>
+                <input class="form-control" value="T.C./TUR" readonly>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Anne İsmi:</label>
+                <input class="form-control" name="mother_name" oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '');" placeholder="Anne İsmi" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Baba Adı:</label>
+                <input class="form-control" name="father_name" oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '');" placeholder="Baba Adı" required>
+              </div>
+              <div class="col-12 mt-4">
+                <label class="form-label">Kimlik Fotoğrafı:</label>
+                <input class="form-control" type="file" name="image" accept="image/*" required>
+              </div>
+              <div class="col-12 mt-4">
+                <button type="submit" class="btn btn-generate">Kimlik Oluştur</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Results -->
+      <div class="col-lg-5">
+        <div class="card card-modern h-100">
+          <div class="card-header card-header-modern py-3">
+            <h5 class="mb-0">Önizleme & İndirme</h5>
+          </div>
+          <div class="card-body p-4 text-center">
+            
+            <div class="text-one text-muted mb-4">
+              <small>Girdiğiniz bilgiler ile kimlik oluşturduğunuzda sonuçlar burada belirecektir.</small>
+            </div>
+            
+            <div class="text-two d-none text-success mb-4">
+              <small>Kimlik başarıyla oluşturuldu! Aşağıdan görselleri indirebilirsiniz.</small>
+            </div>
+
+            <div class="preview-box mb-4">
+              <h6 class="text-muted mb-3">Ön Yüz</h6>
+              <img src="img/front-empty.png" class="front-image mw-100 rounded mb-3" alt="Front Preview">
+              <button class="btn btn-download w-100" id="download-front" disabled>Ön Yüzü İndir</button>
+            </div>
+
+            <div class="preview-box">
+              <h6 class="text-muted mb-3">Arka Yüz</h6>
+              <img src="img/back-empty.png" class="back-image mw-100 rounded mb-3" alt="Back Preview">
+              <button class="btn btn-download w-100" id="download-back" disabled>Arka Yüzü İndir</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.min.js?v=3"></script>
+</body>
+</html>
